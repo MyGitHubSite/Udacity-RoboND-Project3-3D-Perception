@@ -2,20 +2,12 @@
 
 ### Exercise-1: Tabletop Segmentation
 
-The following steps were completed in this exercise:
+The following steps were completed in this exercise using RANSAC.py:
 
 - Downsample your point cloud by applying a Voxel Grid Filter.
 - Apply a Pass Through Filter to isolate the table and objects.
 - Perform RANSAC plane fitting to identify the table.
 - Use the ExtractIndices Filter to create new point clouds containing the table and objects separately.
-
-Using RANSAC.py:
-
-    # Import PCL module
-    import pcl
-
-    # Load Point Cloud file
-    cloud = pcl.load_XYZRGB('tabletop.pcd')
 
 #### Downsample your point cloud by applying a Voxel Grid Filter.
 
