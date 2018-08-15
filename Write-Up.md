@@ -89,8 +89,17 @@ To view a .pcd file:
 
 ### Exercise-2: Euclidean Clustering with ROS and PCL
 
-Extend from Exercise-1 by converting clouds back to ROS message format and publishing them to topics: /pcl_objects and /pcl_table.
+Build the perception pipeline by performing following steps:
+
+1. Create a python ros node that subscribes to /sensor_stick/point_cloud topic. Use the template.py file found under /sensor_stick/scripts/ to get started.
+2. Use your code from Exercise-1 to apply various filters and segment the table using RANSAC.
+3. Create publishers and topics to publish the segmented table and tabletop objects as separate point clouds
+4. Apply Euclidean clustering on the table-top objects (after table segmentation is successful)
+5. Create a XYZRGB point cloud such that each cluster obtained from the previous step has its own unique color.
+6. Finally publish your colored cluster cloud on a separate topic 
  
+![Segmentation](/Exercise-2/segmentation.py)
+
 #### Published Topics:
 
 ![Topics](/Exercise-2/Topics.JPG)
@@ -98,6 +107,10 @@ Extend from Exercise-1 by converting clouds back to ROS message format and publi
 #### Table:
 
 ![Table](/Exercise-2/Table.JPG)
+
+#### Objects:
+
+![Table](/Exercise-2/Objects.JPG)
 
 #### Clustered Objects:
 
