@@ -9,6 +9,12 @@ The following steps were completed in this exercise using RANSAC.py:
 - Perform RANSAC plane fitting to identify the table.
 - Use the ExtractIndices Filter to create new point clouds containing the table and objects separately.
 
+#### Original Point Cloud.
+
+    # Load Point Cloud file
+    cloud = pcl.load_XYZRGB('tabletop.pcd')
+    pcl.save(cloud, 'cloud.pcd')
+
 #### Downsample your point cloud by applying a Voxel Grid Filter.
 
     # Create a VoxelGrid filter object for our input point cloud
@@ -68,6 +74,7 @@ To view a .pcd file:
 
     $ python RANSAC.py
 
+    $ pcl_viewer cloud.pcd
     $ pcl_viewer voxel_downsampled.pcd
     $ pcl_viewer pass_through_filtered.pcd
     $ pcl_viewer extracted_inliers.pcd
