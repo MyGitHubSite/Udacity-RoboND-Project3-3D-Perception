@@ -17,7 +17,7 @@ Using RANSAC.py:
     # Load Point Cloud file
     cloud = pcl.load_XYZRGB('tabletop.pcd')
 
-### Downsample your point cloud by applying a Voxel Grid Filter.
+#### Downsample your point cloud by applying a Voxel Grid Filter.
 
     # Create a VoxelGrid filter object for our input point cloud
     vox = cloud.make_voxel_grid_filter()
@@ -32,7 +32,7 @@ Using RANSAC.py:
     cloud_filtered = vox.filter()
     pcl.save(cloud_filtered, 'voxel_downsampled.pcd')
 
-### Apply a Pass Through Filter to isolate the table and objects.
+#### Apply a Pass Through Filter to isolate the table and objects.
 
     # Create a PassThrough filter object.
     passthrough = cloud_filtered.make_passthrough_filter()
@@ -48,7 +48,7 @@ Using RANSAC.py:
     cloud_filtered = passthrough.filter()
     pcl.save(cloud_filtered, 'pass_through_filtered.pcd')
 
-### Perform RANSAC plane fitting to identify the table.
+#### Perform RANSAC plane fitting to identify the table.
 
     # RANSAC plane segmentation
     # Create the segmentation object
