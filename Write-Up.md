@@ -1,4 +1,5 @@
 # Udacity-RoboND-Project3-3D-Perception
+___
 
 ### Exercise-1: Tabletop Segmentation
 
@@ -18,6 +19,8 @@ To view a .pcd file:
     $ pcl_viewer pass_through_filtered.pcd
     $ pcl_viewer extracted_inliers.pcd
     $ pcl_viewer extracted_outliers.pcd
+
+![RANSAC](/Exercise-1/RANSAC.py)
 
 #### Original Point Cloud.
 
@@ -87,6 +90,8 @@ To view a .pcd file:
 ![Extracted_Inliers](/Exercise-1/Extracted_Inliers.JPG)
 ![Extracted_Outliers](/Exercise-1/Extracted_Outliers.JPG)
 
+___
+
 ### Exercise-2: Euclidean Clustering with ROS and PCL
 
 Build the perception pipeline by performing following steps:
@@ -116,6 +121,9 @@ Build the perception pipeline by performing following steps:
 
 ![Cluster](/Exercise-2/Cluster.JPG)
 
+___
+
+### Exercise-3: Euclidean Clustering with ROS and PCL
 
 
 
