@@ -124,7 +124,127 @@ Build the perception pipeline by performing following steps:
 
 ___
 
-### Exercise-3: Euclidean Clustering with ROS and PCL
+### Exercise-3: Object Recognition with Python, ROS and PCL
+
+This exercise builds on Exercises 1 and 2.  Continue building up the perception pipeline in ROS. 
+
+- Extract color and shape features from the objects that are sitting on the table from Exercise-1 and Exercise-2, in order to train a classifier to detect them.
+
+#### Things could you do to improve the performance of your model.
+
+- Compute features for a larger set of random orientations of these objects - I used 100 orientations per object:
+
+    for model_name in models:
+        spawn_model(model_name)
+
+        for i in range(100):
+        
+- Convert RGB data to HSV - Yes, I set using_hsv=True:
+
+    # Extract histogram features
+    chists = compute_color_histograms(sample_cloud, using_hsv=True)
+            
+- Try different binning schemes with the histograms - I changed the number of nins from 16 to 32:
+
+    channel_1_hist, bin_edges = np.histogram(channel_1_vals, bins=32, range=(0, 256))
+    channel_2_hist, bin_edges = np.histogram(channel_2_vals, bins=32, range=(0, 256))
+    channel_3_hist, bin_edges = np.histogram(channel_3_vals, bins=32, range=(0, 256))
+
+- Modify the SVM parameters (kernel, regularization etc.) - I did not change any of the parameters in train_svm.py.
+
+#### compute_color_histograms()
+
+def compute_color_histograms(cloud, using_hsv=False):
+
+    # Compute histograms for the clusters
+    point_colors_list = []
+
+    # Step through each point in the point cloud
+    for point in pc2.read_points(cloud, skip_nans=True):
+        rgb_list = float_to_rgb(point[3])
+        if using_hsv:
+            point_colors_list.append(rgb_to_hsv(rgb_list) * 255)
+        else:
+            point_colors_list.append(rgb_list)
+
+    # Populate lists with color values
+    channel_1_vals = []
+    channel_2_vals = []
+    channel_3_vals = []
+
+    for color in point_colors_list:
+        channel_1_vals.append(color[0])
+        channel_2_vals.append(color[1])
+        channel_3_vals.append(color[2])
+    
+    # TODO: Compute histograms
+    channel_1_hist, bin_edges = np.histogram(channel_1_vals, bins=32, range=(0, 256))
+    channel_2_hist, bin_edges = np.histogram(channel_2_vals, bins=32, range=(0, 256))
+    channel_3_hist, bin_edges = np.histogram(channel_3_vals, bins=32, range=(0, 256))
+
+    # TODO: Concatenate and normalize the histograms
+    hist_features = np.concatenate((channel_1_hist, channel_2_hist, channel_3_hist)).astype(np.float64)
+    norm_features = 1.0*hist_features / np.sum(hist_features)
+
+    # Generate random features for demo mode.  
+    normed_features = np.random.random(96) 
+
+    # Replace normed_features with your feature vector
+    normed_features = norm_features
+
+    return normed_features 
+
+#### compute_normal_histograms()
+
+def compute_normal_histograms(normal_cloud):
+    norm_x_vals = []
+    norm_y_vals = []
+    norm_z_vals = []
+
+    for norm_component in pc2.read_points(normal_cloud,
+                                          field_names = ('normal_x', 'normal_y', 'normal_z'),
+                                          skip_nans=True):
+        norm_x_vals.append(norm_component[0])
+        norm_y_vals.append(norm_component[1])
+        norm_z_vals.append(norm_component[2])
+
+    # TODO: Compute histograms of normal values (just like with color)
+    channel_1_vals = []
+    channel_2_vals = []
+    channel_3_vals = []
+
+    for i in range(len(norm_x_vals)):
+        channel_1_vals.append(norm_x_vals[i])
+        channel_2_vals.append(norm_y_vals[i])
+        channel_3_vals.append(norm_z_vals[i])
+
+    channel_1_hist, bin_edges = np.histogram(channel_1_vals, bins=32, range=(0, 256))
+    channel_2_hist, bin_edges = np.histogram(channel_2_vals, bins=32, range=(0, 256))
+    channel_3_hist, bin_edges = np.histogram(channel_3_vals, bins=32, range=(0, 256))
+
+    # TODO: Concatenate and normalize the histograms
+    hist_features = np.concatenate((channel_1_hist, channel_2_hist, channel_3_hist)).astype(np.float64)
+    norm_features = 1.0*hist_features / np.sum(hist_features)
+
+    # Generate random features for demo mode.  
+    normed_features = np.random.random(96)
+
+    # Replace normed_features with your feature vector
+    normed_features = norm_features
+
+    return normed_features
+
+
+#### train_svm.py 
+
+
+
+#### Normalized Confusion Matrix:
+
+
+
+
+
 
 
 
