@@ -1,6 +1,6 @@
 # Udacity-RoboND-Project3-3D-Perception
 
-## Exercise-1: Tabletop Segmentation
+### Exercise-1: Tabletop Segmentation
 
 In brief, the steps to complete this exercise are the following:
 
@@ -11,9 +11,9 @@ Use the ExtractIndices Filter to create new point clouds containing the table an
 To view a .pcd file:
 
 $ python RANSAC.py
----
+
 $ pcl_viewer voxel_downsampled.pcd
 $ pcl_viewer pass_through_filtered.pcd
 $ pcl_viewer extracted_inliers.pcd
 $ pcl_viewer extracted_outliers.pcd
----
+
