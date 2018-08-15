@@ -20,6 +20,7 @@ In brief, the steps to complete this exercise are the following:
 ```
 $ python RANSAC.py
 
+$ pcl_viewer tabletop.pcd
 $ pcl_viewer voxel_downsampled.pcd
 $ pcl_viewer pass_through_filtered.pcd
 $ pcl_viewer extracted_inliers.pcd
