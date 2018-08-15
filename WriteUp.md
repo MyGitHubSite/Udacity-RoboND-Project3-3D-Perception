@@ -31,6 +31,8 @@ The following steps were completed in this exercise using RANSAC.py:
     cloud_filtered = vox.filter()
     pcl.save(cloud_filtered, 'voxel_downsampled.pcd')
 
+![Voxel_Downsampled](/Exercise-1/Voxel_Downsampled.JPG)
+
 #### Apply a Pass Through Filter to isolate the table and objects.
 
     # Create a PassThrough filter object.
@@ -46,6 +48,8 @@ The following steps were completed in this exercise using RANSAC.py:
     # Finally use the filter function to obtain the resultant point cloud. 
     cloud_filtered = passthrough.filter()
     pcl.save(cloud_filtered, 'pass_through_filtered.pcd')
+
+![Pass_Through_Filtered](/Exercise-1/Pass_Through_Filtered.JPG)
 
 #### Perform RANSAC plane fitting to identify the table.
 
@@ -70,6 +74,8 @@ The following steps were completed in this exercise using RANSAC.py:
     pcl.save(extracted_inliers, 'extracted_inliers.pcd')
     pcl.save(extracted_outliers, 'extracted_outliers.pcd')
 
+![Extracted_Inliers](/Exercise-1/Extracted_Inliers.JPG)
+![Extracted_Outliers](/Exercise-1/Extracted_Outliers.JPG)
 
 To view a .pcd file:
 
