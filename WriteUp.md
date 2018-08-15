@@ -14,7 +14,7 @@ The following steps were completed in this exercise using RANSAC.py:
     # Load Point Cloud file
     cloud = pcl.load_XYZRGB('tabletop.pcd')
 
-![TableTop](/Exercise-1/tabletop.jpg) 
+![TableTop](/Exercise-1/TableTop.jpg) 
 
 #### Downsample your point cloud by applying a Voxel Grid Filter.
 
