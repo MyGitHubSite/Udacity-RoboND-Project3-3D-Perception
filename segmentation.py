@@ -16,8 +16,6 @@ def pcl_callback(pcl_msg):
     vox = cloud.make_voxel_grid_filter()
 
     # Choose a voxel (also known as leaf) size
-    # Note: this (1) is a poor choice of leaf size   
-    # Experiment and find the appropriate size!
     LEAF_SIZE = 0.01   
 
     # Set the voxel (or leaf) size  
@@ -25,8 +23,7 @@ def pcl_callback(pcl_msg):
 
     # Call the filter function to obtain the resultant downsampled point cloud
     cloud_filtered = vox.filter()
-    #filename = 'voxel_downsampled.pcd'
-    #pcl.save(cloud_filtered, filename)
+    pcl.save(cloud_filtered, 'voxel_downsampled.pcd')
 
     # TODO: PassThrough Filter
     # Create a PassThrough filter object.
@@ -41,8 +38,7 @@ def pcl_callback(pcl_msg):
 
     # Finally use the filter function to obtain the resultant point cloud. 
     cloud_filtered = passthrough.filter()
-    #filename = 'pass_through_filtered.pcd'
-    #pcl.save(cloud_filtered, filename)
+    #pcl.save(cloud_filtered, 'pass_through_filtered.pcd')
 
     # TODO: RANSAC Plane Segmentation
     # Create the segmentation object
@@ -53,8 +49,6 @@ def pcl_callback(pcl_msg):
     seg.set_method_type(pcl.SAC_RANSAC)
 
     # Max distance for a point to be considered fitting the model
-    # Experiment with different values for max_distance 
-    # for segmenting the table
     max_distance = 0.01
     seg.set_distance_threshold(max_distance)
 
@@ -62,15 +56,10 @@ def pcl_callback(pcl_msg):
     inliers, coefficients = seg.segment()
 
     # TODO: Extract inliers and outliers
-    # Extract inliers
     cloud_table = cloud_filtered.extract(inliers, negative=False)
-    #filename = 'cloud_table.pcd'
-    #pcl.save(cloud_table, filename)
-
-    # Extract outliers
     cloud_objects = cloud_filtered.extract(inliers, negative=True)
-    #filename = 'cloud_objects.pcd'
-    #pcl.save(cloud_objects, filename)
+    pcl.save(cloud_table, 'cloud_table.pcd')
+    pcl.save(cloud_objects, 'cloud_objects.pcd')
 
     # TODO: Euclidean Clustering
     # Use only spatial information:
@@ -80,13 +69,10 @@ def pcl_callback(pcl_msg):
     # Create a cluster extraction object
     ec = white_cloud.make_EuclideanClusterExtraction()
 
-    # Set tolerances for distance threshold 
-    # as well as minimum and maximum cluster size (in points)
-    # NOTE: These are poor choices of clustering parameters
-    # Your task is to experiment and find values that work for segmenting objects.
+    # Set tolerances for distance threshold as well as minimum and maximum cluster size (in points)
     ec.set_ClusterTolerance(0.05)
     ec.set_MinClusterSize(50)
-    ec.set_MaxClusterSize(500000)
+    ec.set_MaxClusterSize(5000)
 
     # Search the k-d tree for clusters
     ec.set_SearchMethod(tree)
