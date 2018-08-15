@@ -61,7 +61,7 @@ To view a .pcd file:
 
 ![Pass_Through_Filtered](/Exercise-1/Pass_Through_Filtered.JPG)
 
-#### Perform RANSAC plane fitting to identify the table.
+#### Perform RANSAC plane fitting to identify the table and objects separately.
 
     # RANSAC plane segmentation
     # Create the segmentation object
