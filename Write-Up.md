@@ -87,6 +87,8 @@ To view a .pcd file:
 ![Extracted_Inliers](/Exercise-1/Extracted_Inliers.JPG)
 ![Extracted_Outliers](/Exercise-1/Extracted_Outliers.JPG)
 
-### Exercise-2: Tabletop Segmentation
+### Exercise-2: Euclidean Clustering with ROS and PCL
+
+
 
 
