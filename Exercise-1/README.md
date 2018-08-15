@@ -18,5 +18,10 @@ In brief, the steps to complete this exercise are the following:
 ### To view a .pcd file:
 
 ```
-$ pcl_viewer filename.pcd 
+$ python RANSAC.py
+
+$ pcl_viewer voxel_downsampled.pcd
+$ pcl_viewer pass_through_filtered.pcd
+$ pcl_viewer extracted_inliers.pcd
+$ pcl_viewer extracted_outliers.pcd
 ```
