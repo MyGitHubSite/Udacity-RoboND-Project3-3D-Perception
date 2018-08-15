@@ -9,6 +9,16 @@ The following steps were completed in this exercise using RANSAC.py:
 - Perform RANSAC plane fitting to identify the table.
 - Use the ExtractIndices Filter to create new point clouds containing the table and objects separately.
 
+To view a .pcd file:
+
+    $ python RANSAC.py
+
+    $ pcl_viewer cloud.pcd
+    $ pcl_viewer voxel_downsampled.pcd
+    $ pcl_viewer pass_through_filtered.pcd
+    $ pcl_viewer extracted_inliers.pcd
+    $ pcl_viewer extracted_outliers.pcd
+
 #### Original Point Cloud.
 
     # Load Point Cloud file
@@ -76,14 +86,4 @@ The following steps were completed in this exercise using RANSAC.py:
 
 ![Extracted_Inliers](/Exercise-1/Extracted_Inliers.JPG)
 ![Extracted_Outliers](/Exercise-1/Extracted_Outliers.JPG)
-
-To view a .pcd file:
-
-    $ python RANSAC.py
-
-    $ pcl_viewer cloud.pcd
-    $ pcl_viewer voxel_downsampled.pcd
-    $ pcl_viewer pass_through_filtered.pcd
-    $ pcl_viewer extracted_inliers.pcd
-    $ pcl_viewer extracted_outliers.pcd
 
