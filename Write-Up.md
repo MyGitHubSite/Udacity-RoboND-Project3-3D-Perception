@@ -141,7 +141,6 @@ This exercise builds on Exercises 1 and 2.  Continue building up the perception 
         
 - Convert RGB data to HSV - Yes, I set using_hsv=True:
 
-    # Extract histogram features
     chists = compute_color_histograms(sample_cloud, using_hsv=True)
             
 - Try different binning schemes with the histograms - I changed the number of nins from 16 to 32:
