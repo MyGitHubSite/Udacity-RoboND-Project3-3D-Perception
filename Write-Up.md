@@ -90,18 +90,17 @@ To view a .pcd file:
 ### Exercise-2: Euclidean Clustering with ROS and PCL
 
 Extend from Exercise-1 by converting clouds back to ROS message format and publishing them to topics: /pcl_objects and /pcl_table.
-
-#### Original Scene:
-
-![Objects](/Exercise-2/Objects.JPG)
  
 #### Published Topics:
 
-![Topics](/Exercise-2/Topics.JPG
+![Topics](/Exercise-2/Topics.JPG)
 
-#### :
+#### Table:
 
 ![Table](/Exercise-2/Table.JPG)
+
+#### Clustered Objects:
+
 ![Cluster](/Exercise-2/Cluster.JPG)
 
 
