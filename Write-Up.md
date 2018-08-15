@@ -89,10 +89,10 @@ To view a .pcd file:
 
 ### Exercise-2: Euclidean Clustering with ROS and PCL
 
-![Table](/Exercise-1/Table.JPG)
-![Topics](/Exercise-1/Topics.JPG)
-![Objects](/Exercise-1/Objects.JPG)
-![Cluster](/Exercise-1/Cluster.JPG)
+![Table](/Exercise-2/Table.JPG)
+![Topics](/Exercise-2/Topics.JPG)
+![Objects](/Exercise-2/Objects.JPG)
+![Cluster](/Exercise-2/Cluster.JPG)
 
 
 
