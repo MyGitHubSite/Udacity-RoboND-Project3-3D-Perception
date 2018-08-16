@@ -237,6 +237,14 @@ def compute_normal_histograms(normal_cloud):
 
 ![Normalized Confusion Matrix](/Exercise-3/Normalized_Confusion_Matrix.JPG)
 
+#### Object Recognition:
+
+![Object Recognition](/Exercise-3/Object_Recognition.JPG)
+
+___
+
+
+
 
 
 
