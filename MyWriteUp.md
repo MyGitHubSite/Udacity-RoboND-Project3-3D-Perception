@@ -261,7 +261,7 @@ I was able to recognize all 3 objects.
 
 ##### Object Recognition:
 
-![Output_1.YAML](/Project/Output_1.YAML)
+![Output_1.YAML](/Project/output_1.yaml)
 ___
 
 #### Test_World 2:
@@ -274,7 +274,7 @@ I was able to recognize 4/5 objects.  Glue could not be found.
 
 ##### Object Recognition:
 
-![Output_2.YAML](/Project/Output_2.YAML)
+![Output_2.YAML](/Project/output_2.yaml)
 
 ___
 
@@ -288,7 +288,7 @@ I was able to recognize 7/8 objects.  Glue could not be found.
 
 ##### Object Recognition:
 
-![Output_3.YAML](/Project/Output_3.YAML)
+![Output_3.YAML](/Project/output_3.yaml)
 
 
 
