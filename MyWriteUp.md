@@ -252,7 +252,9 @@ For all three tabletop setups (test*.world),
  - Construct the messages that would comprise a valid PickPlace request and output them to .yaml format
 
 
-#### Test_World 1:
+#### Test_World 1: 
+
+I was able to recognize all 3 objects.
 
 ##### Normalized Confusion Matrix:
 
@@ -260,10 +262,12 @@ For all three tabletop setups (test*.world),
 
 ##### Object Recognition:
 
-![Object Recognition1](/Project/Object_Recognition1.JPG)
+![Object Recognition1](/ProjectOutput_1.YAML)
 ___
 
 #### Test_World 2:
+
+I was able to recognize 4/5 objects.  Glue could not be found.
 
 #### Normalized Confusion Matrix:
 
@@ -271,11 +275,13 @@ ___
 
 ##### Object Recognition:
 
-![Object Recognition2](/Project/Object_Recognition2.JPG)
+![Object Recognition2](/Project/Output_2.YAML)
 
 ___
 
 #### Test_World 3:
+
+I was able to recognize 7/8 objects.  Glue could not be found.
 
 #### Normalized Confusion Matrix:
 
@@ -283,7 +289,7 @@ ___
 
 ##### Object Recognition:
 
-![Object Recognition3](/Project/Object_Recognition3.JPG)
+![Object Recognition3](/Project/Output_3.YAML)
 
 
 
