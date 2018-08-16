@@ -251,7 +251,6 @@ For all three tabletop setups (test*.world),
  - Read in respective pick list (pick_list_*.yaml)
  - Construct the messages that would comprise a valid PickPlace request and output them to .yaml format
 
-
 #### Test_World 1: 
 
 I was able to recognize all 3 objects.
@@ -262,7 +261,7 @@ I was able to recognize all 3 objects.
 
 ##### Object Recognition:
 
-![Object Recognition1](/ProjectOutput_1.YAML)
+![Output_1.YAML](/Project/Output_1.YAML)
 ___
 
 #### Test_World 2:
@@ -275,7 +274,7 @@ I was able to recognize 4/5 objects.  Glue could not be found.
 
 ##### Object Recognition:
 
-![Object Recognition2](/Project/Output_2.YAML)
+![Output_2.YAML](/Project/Output_2.YAML)
 
 ___
 
@@ -289,7 +288,7 @@ I was able to recognize 7/8 objects.  Glue could not be found.
 
 ##### Object Recognition:
 
-![Object Recognition3](/Project/Output_3.YAML)
+![Output_3.YAML](/Project/Output_3.YAML)
 
 
 
