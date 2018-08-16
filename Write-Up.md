@@ -132,24 +132,24 @@ This exercise builds on Exercises 1 and 2.  Continue building up the perception 
 
 #### Things could you do to improve the performance of your model.
 
-- Compute features for a larger set of random orientations of these objects - I used 100 orientations per object:
+Compute features for a larger set of random orientations of these objects - I used 100 orientations per object:
 
     for model_name in models:
         spawn_model(model_name)
 
         for i in range(100):
-        
-- Convert RGB data to HSV - Yes, I set using_hsv=True:
+
+Convert RGB data to HSV - Yes, I set using_hsv=True:
 
     chists = compute_color_histograms(sample_cloud, using_hsv=True)
             
-- Try different binning schemes with the histograms - I changed the number of nins from 16 to 32:
+Try different binning schemes with the histograms - I changed the number of nins from 16 to 32:
 
     channel_1_hist, bin_edges = np.histogram(channel_1_vals, bins=32, range=(0, 256))
     channel_2_hist, bin_edges = np.histogram(channel_2_vals, bins=32, range=(0, 256))
     channel_3_hist, bin_edges = np.histogram(channel_3_vals, bins=32, range=(0, 256))
 
-- Modify the SVM parameters (kernel, regularization etc.) - I did not change any of the parameters in train_svm.py.
+Modify the SVM parameters (kernel, regularization etc.) - I did not change any of the parameters in train_svm.py.
 
 #### compute_color_histograms()
 
