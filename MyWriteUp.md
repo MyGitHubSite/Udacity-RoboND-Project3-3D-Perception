@@ -198,6 +198,7 @@ Modify the SVM parameters (kernel, regularization etc.) - I did not change any o
     def compute_normal_histograms(normal_cloud):
         norm_x_vals = []
         norm_y_vals = []
+        
         norm_z_vals = []
 
         for norm_component in pc2.read_points(normal_cloud,
@@ -251,7 +252,15 @@ For all three tabletop setups (test*.world),
  - Construct the messages that would comprise a valid PickPlace request and output them to .yaml format
 
 
+#### Normalized Confusion Matrix1:
 
+![Normalized Confusion Matrix1](/Project/Normalized_Confusion_Matrix1.JPG)
+![Normalized Confusion Matrix2](/Project/Normalized_Confusion_Matrix2.JPG)
+
+#### Object Recognition1:
+
+![Object Recognition1](/Project/Object_Recognition1.JPG)
+![Object Recognition2](/Project/Object_Recognition2.JPG)
 
 
 
