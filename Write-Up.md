@@ -237,7 +237,7 @@ def compute_normal_histograms(normal_cloud):
 
 #### Normalized Confusion Matrix:
 
-![Normalized Confucion Matrix](/Exercise-3/Normalized Confusion Matrix.JPG)
+![Normalized Confusion Matrix](/Exercise-3/Normalized_Confusion_Matrix.JPG)
 
 
 
