@@ -233,8 +233,6 @@ def compute_normal_histograms(normal_cloud):
 
     return normed_features
 
-#### train_svm.py 
-
 #### Normalized Confusion Matrix:
 
 ![Normalized Confusion Matrix](/Exercise-3/Normalized_Confusion_Matrix.JPG)
