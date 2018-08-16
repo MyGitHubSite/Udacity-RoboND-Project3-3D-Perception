@@ -244,7 +244,7 @@ Modify the SVM parameters (kernel, regularization etc.) - I did not change any o
 
 ___
 
-### Pick and Place Setup
+### Project - Pick and Place Setup
 
 For all three tabletop setups (test*.world), 
  - Perform object recognition
