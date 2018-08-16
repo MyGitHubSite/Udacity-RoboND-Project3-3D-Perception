@@ -21,7 +21,7 @@ To view a .pcd file:
     $ pcl_viewer extracted_inliers.pcd
     $ pcl_viewer extracted_outliers.pcd
 
-![RANSAC](/Exercise-1/RANSAC.py)
+![RANSAC.py](/Exercise-1/RANSAC.py)
 
 #### Original Point Cloud.
 
@@ -104,7 +104,7 @@ Build the perception pipeline by performing following steps:
 5. Create a XYZRGB point cloud such that each cluster obtained from the previous step has its own unique color.
 6. Finally publish your colored cluster cloud on a separate topic 
  
-![Segmentation](/Exercise-2/segmentation.py)
+![Segmentation.py](/Exercise-2/segmentation.py)
 
 #### Published Topics:
 
