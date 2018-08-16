@@ -243,6 +243,13 @@ Modify the SVM parameters (kernel, regularization etc.) - I did not change any o
 
 ___
 
+### Pick and Place Setup
+
+For all three tabletop setups (test*.world), 
+ - Perform object recognition
+ - Read in respective pick list (pick_list_*.yaml)
+ - Construct the messages that would comprise a valid PickPlace request and output them to .yaml format
+
 
 
 
