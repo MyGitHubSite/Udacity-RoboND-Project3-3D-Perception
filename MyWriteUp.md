@@ -130,7 +130,7 @@ This exercise builds on Exercises 1 and 2.  Continue building up the perception 
 
 - Extract color and shape features from the objects that are sitting on the table from Exercise-1 and Exercise-2, in order to train a classifier to detect them.
 
-#### Things could you do to improve the performance of your model:
+#### Things you could do to improve the performance of your model:
 
 Compute features for a larger set of random orientations of these objects - I used 100 orientations per object:
 
