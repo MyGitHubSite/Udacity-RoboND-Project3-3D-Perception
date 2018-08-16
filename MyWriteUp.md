@@ -252,15 +252,39 @@ For all three tabletop setups (test*.world),
  - Construct the messages that would comprise a valid PickPlace request and output them to .yaml format
 
 
-#### Normalized Confusion Matrix1:
+#### Test_World 1:
+
+##### Normalized Confusion Matrix:
 
 ![Normalized Confusion Matrix1](/Project/Normalized_Confusion_Matrix1.JPG)
-![Normalized Confusion Matrix2](/Project/Normalized_Confusion_Matrix2.JPG)
 
-#### Object Recognition1:
+##### Object Recognition:
 
 ![Object Recognition1](/Project/Object_Recognition1.JPG)
+___
+
+#### Test_World 2:
+
+#### Normalized Confusion Matrix:
+
+![Normalized Confusion Matrix2](/Project/Normalized_Confusion_Matrix2.JPG)
+
+##### Object Recognition:
+
 ![Object Recognition2](/Project/Object_Recognition2.JPG)
+
+___
+
+#### Test_World 3:
+
+#### Normalized Confusion Matrix:
+
+![Normalized Confusion Matrix3](/Project/Normalized_Confusion_Matrix3.JPG)
+
+##### Object Recognition:
+
+![Object Recognition3](/Project/Object_Recognition3.JPG)
+
 
 
 
